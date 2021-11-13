@@ -1,15 +1,15 @@
-<?php header("Content-Type: application/json"); 
+<?php header("Content-Type: application/json"; charset=UTF-8"); 
 
-$method = $_SERVER['REQUEST_METHOD']; 
+$type = $_SERVER['REQUEST_METHOD']; 
 $user_no = ""; $contents = ""; 
 
-if($method == "GET") {
+if($type == "GET") {
     $user_no = $_GET['user_no']; 
     $contents = $_GET['contents']; 
     echo(json_encode(array("mode" => $_REQUEST['mode'], "user_no" => $user_no, "contents" => $contents))); 
 } 
 
-else if($method == "POST") { 
+else if($type == "POST") { 
     $user_no = $_POST['user_no']; 
     $contents = $_POST['contents']; 
 
